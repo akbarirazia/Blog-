@@ -9,14 +9,13 @@ import {
   Button,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch , useSelector} from "react-redux";
 import { authActions } from "../store";
-import { useStyles } from "./Utils";
-import userSelector from "./AddBlogs";
+import useSelector from "./AddBlogs";
 const Header = () => {
   const classes = useStyles();
   const dispath = useDispatch();
-  const isLoggedIn = userSelector((state) => state.isLoggedIn);
+  const isLoggedIn = useSelector((state) => state.isLoggedIn);
   const [value, setValue] = useState();
   return (
     <AppBar
@@ -27,7 +26,7 @@ const Header = () => {
       }}
     >
       <Toolbar>
-        <Typography className={classes.font} variant="h4">
+        <Typography className={classes.font} variant="h5">
           Afghan Blog
         </Typography>
         {isLoggedIn && (
@@ -65,7 +64,7 @@ const Header = () => {
                 LinkComponent={Link}
                 to="/auth"
                 variant=" contained"
-                sx={{ margin: 1, borderRadius: 10 }}
+                sx={{ margin: 1, borderRadius: 3 }}
                 color="warning"
               >
                 Login
@@ -76,7 +75,7 @@ const Header = () => {
             LinkComponent={Link}
             to="/auth"
             variant="contained"
-            sx={{ margin: 1, borderRadius: 10 }}
+            sx={{ margin: 1, borderRadius: 3 }}
             color="warning"
           >
             Signup
@@ -87,7 +86,7 @@ const Header = () => {
               LinkComponent={Link}
               to="/auth"
               variant="contained"
-              sx={{ margin: 1, borderRadius: 10 }}
+              sx={{ margin: 1, borderRadius: 3}}
               color="warning"
             >
               Logout
