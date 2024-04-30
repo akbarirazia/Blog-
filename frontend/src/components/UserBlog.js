@@ -6,7 +6,7 @@ const UserBlog = () => {
   const id = localStorage.getItem("userId");
   const sendRequest = async () => {
     const res = await axios
-      .get(`http://localhost:3000/api/blog/use${IDBDatabase}`)
+      .get(`http://localhost:3000/api/blog/user${IDBDatabase}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -23,7 +23,7 @@ const UserBlog = () => {
           <Blog
             id={blog._id}
             key={index}
-            iaUser={true}
+            isUser={true}
             title={blog.title}
             description={blog.description}
             imageURL={blog.image}
