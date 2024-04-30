@@ -59,7 +59,7 @@ const BlogDetail = () => {
             border={3}
             borderColor="linear-gradient(90deg, rgba(50,39,144,1) 0%, rgba(8,187,198,1) 55%, rgba(241,236,34,0.6386204139859069) 74%)"
             borderRadius={10}
-            boxShadow="10px 10px 20px #cc"
+            boxShadow="10px 10px 20px #ccc"
             padding={3}
             marginTop={3}
             //margin={auto}
