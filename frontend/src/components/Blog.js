@@ -64,14 +64,13 @@ ${id}`);
           avatar={
             <Avatar
               className={classes.font}
-              sx={{ bgcolor: "red" }}
+              sx={{ bgColor: "warning" }}
               aria-label="recipe"
             >
               {userName.charAt(0)}
             </Avatar>
           }
           title={title}
-          subheader="September 14, 2016"
         />
         <CardMedia
           component="img"
