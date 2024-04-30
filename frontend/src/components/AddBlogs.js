@@ -42,10 +42,10 @@ const AddBlogs = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <Box
-          border={3}
+          border={2}
           borderColor="linear-gradient(90deg, rgba(50,39,144,1) 0%, rgba(8,187,198,1) 55%, rgba(241,236,34,0.6386204139859069) 74%)"
-          borderRadius={10}
-          boxShadow="10px 10px 20px #cc"
+          borderRadius={6}
+          boxShadow="10px 10px 25px #ccc"
           padding={3}
           marginTop={3}
           margin="auto"
@@ -58,7 +58,7 @@ const AddBlogs = () => {
             fontWeight={"bold"}
             padding={3}
             color={"grey"}
-            variant="h2"
+            variant="h3"
             textAlign={"center"}
           >
             Post Your Blog
@@ -72,7 +72,7 @@ const AddBlogs = () => {
             onChange={handleChange}
             value={inputs.title}
             margin="normal"
-            variant="outLined"
+            variant="outlined"
           />
           <InputLabel className={classes.font} sx={labelStyles}>
             Description
@@ -83,7 +83,7 @@ const AddBlogs = () => {
             onChange={handleChange}
             value={inputs.description}
             margin="normal"
-            variant="outLined"
+            variant="outlined"
           />
           <InputLabel className={classes.font} sx={labelStyles}>
             ImageURL
@@ -94,7 +94,7 @@ const AddBlogs = () => {
             onChange={handleChange}
             value={inputs.imageURL}
             margin="normal"
-            variant="outLined"
+            variant="outlined"
           />
           <Button
             sx={{ mt: 2, borderRadius: 4 }}
